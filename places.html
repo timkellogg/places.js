@@ -17,27 +17,33 @@
           <form id="new-contact" class="well">
             <div class="form-group">
               <label for="new-name">Name</label>
-              <input type="text" class="form-control" id="new-name">
+              <input type="text" required class="form-control" id="new-name">
             </div>
             <div class="form-group">
               <label for="new-location">Location</label>
-              <input type="text" class="form-control" id="new-location">
+              <input type="text" required class="form-control" id="new-location">
             </div>
 
             <div class="form-group">
               <label for="new-time">Time of Year</label>
-              <input type="text" class="form-control" name="name" value="" id="new-time">
+              <input type="text" required class="form-control" name="name" value="" id="new-time">
             </div>
 
             <div class="form-group">
               <label for="new-note">Note</label>
-              <input type="text" class="form-control" name="name" value="" id="new-note">
+              <input type="text" required class="form-control" name="name" value="" id="new-note">
             </div>
 
-            <div class="form-group">
-              <label for="new-landmark">Landmark</label>
-              <input type="text" class="form-control" id="new-landmark">
+            <div id="new-landmarks">
+              <div class="new-landmark">
+                <div class="form-group">
+                  <label for="new-landmark-name">Landmark</label>
+                  <input type="text" required class="form-control new-landmark-name">
+                </div>
+              </div>
             </div>
+
+            <span id="add-landmark" class="btn btn-success">Add another landmark</span>
 
             <div class="text-center">
               <button type="submit" class="btn btn-primary">Add</button>
@@ -57,7 +63,10 @@
               <p>Location: <span class="new-location"></span></p>
               <p>Time: <span class="new-time"></span></p>
               <p>Note: <span class="new-note"></span></p>
-              <p>Landmark: <span class="new-landmark"></span></p>
+              <p>Landmarks:</p>
+              <ul id="landmarks">
+
+              </ul>
             </div>
           </div>
 
