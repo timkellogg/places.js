@@ -1,10 +1,12 @@
 $(document).ready(function() {
   $("#add-landmark").click(function() {
-    $("#new-landmark").append(
-      '<div class="form-group">'+
-        '<label for="new-landmark">Landmark</label>'+
-        '<input type="text" required class="form-control" id="new-landmark">'+
-      '</div>'
+    $("#new-landmarks").append(
+      '<div class="new-landmark">' +
+        '<div class="form-group">'+
+          '<label for="new-landmark">Landmark</label>'+
+          '<input type="text" required class="form-control" id="new-landmark">'+
+        '</div>' +
+       '</div>'
       );
   });
 
@@ -38,8 +40,6 @@ $(document).ready(function() {
       $(".new-time").text(newPlace.time);
       $(".new-note").text(newPlace.note);
       newPlace.landmarks.forEach(function(landmark) {
-        console.log(landmark);
-        console.log(landmark.name);
         $("ul#landmarks").append("<li>" + landmark.name + "</li>");
       });
     });
