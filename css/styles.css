@@ -1,0 +1,6 @@
+#show-place { display: none; }
+.place:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
